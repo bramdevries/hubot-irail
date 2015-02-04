@@ -1,0 +1,19 @@
+{
+  "name": "hubot-irail",
+  "version": "0.0.1",
+  "description": "Get information about trains in Belgium from hubot",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hubot",
+    "hubot-scripts",
+    "irail"
+  ],
+  "author": "Bram Devries <bramdevries93@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "moment-timezone": "^0.3.0"
+  }
+}
