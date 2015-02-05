@@ -1,3 +1,18 @@
+# Description:
+#   Get information about trains in Belgium from hubot
+#
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   nmbs help
+#   nmbs from <station> to <station>
+#
+# Author:
+#   bramdevries
 moment = require('moment-timezone')
 
 module.exports = (robot) ->
