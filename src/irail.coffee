@@ -13,6 +13,7 @@
 #
 # Author:
 #   bramdevries
+
 moment = require('moment-timezone')
 
 module.exports = (robot) ->

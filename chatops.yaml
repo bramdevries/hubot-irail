@@ -1,0 +1,12 @@
+name: irail
+display: Irail
+description: Get information about trains in Belgium from hubot
+author: bramdevries
+repo: https://github.com/bramdevries/hubot-irail
+paths:
+    - src/irail.coffee
+commands:
+    - nmbs help
+    - nmbs from <station> to <station>
+dependencies:
+    - moment-timezone: '^0.3.0'
