@@ -1,6 +1,6 @@
 {
   "name": "hubot-irail",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Get information about trains in Belgium from hubot",
   "main": "index.coffee",
   "scripts": {
