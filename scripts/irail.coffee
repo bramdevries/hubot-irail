@@ -43,13 +43,12 @@ module.exports = (robot) ->
 
       minutes = departureTime.diff(current, 'minutes')
 
-      if (minutes == 0) {
+      if minutes == 0
         message += ' right now'
-      } else if (minutes == 1) {
+      else if minutes == 1
         message += ' in one minute'
-      } else {
+      else
         message += ' in ' + minutes + ' minutes'
-      }
 
       message +=  ' (at ' + departureTime.format('HH:mm') + ')'
 
