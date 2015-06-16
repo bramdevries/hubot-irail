@@ -34,14 +34,25 @@ module.exports = (robot) ->
         return
 
       current = moment().tz('Europe/Berlin')
-      message = 'The next train to ' + to;
+      message = 'The next train to ' + to + ' leaves';
 
       data = JSON.parse(body)
       connection = data.connection[0]
 
       departureTime = moment(connection.departure.time * 1000).tz('Europe/Berlin');
 
-      message += ' leaves in ' + departureTime.diff(current, 'minutes') + ' minutes (at ' + departureTime.format('HH:mm') + ')'
+      minutes = departureTime.diff(current, 'minutes')
+
+      if (minutes == 0) {
+        message += ' right now'
+      } else if (minutes == 1) {
+        message += ' in one minute'
+      } else {
+        message += ' in ' + minutes + ' minutes'
+      }
+
+      message +=  ' (at ' + departureTime.format('HH:mm') + ')'
+
       message += ' from platform ' + connection.departure.platform + ' in ' + from + '.'
 
       delay = Math.round(connection.departure.delay / 60)
